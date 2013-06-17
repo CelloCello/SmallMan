@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Test</title>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='jquery-1.7.2.js') }}"></script>
+	<script type="text/javascript">
+
+		function onBtnSend(){
+			var data_ = {
+				words : $("#content").val()
+			};
+
+			$.ajax({
+			    type: 'POST',
+			    contentType: 'application/json',
+			    data: JSON.stringify(data_),
+			    dataType: 'json',
+			    url: "{{ url_for('getNewImg') }}",
+			    success: function (data) {
+			    	//console.log(data);
+			        //alert(data.rst);
+			        d = new Date();	
+			        $("#outimg").attr("src",data.rst+"?"+d.getTime());
+			    }
+			});
+		}
+
+		$(document).ready(function(){
+
+		});
+	</script>
+</head>
+<body>
+	<h1>SmallMan</h1>
+	<br/>
+	<div>
+	<textarea id="content" cols="50" rows="15"></textarea>
+	</div>
+	<button id="send" onclick="onBtnSend()">Send</button>
+	<br/>
+	<br/>
+	<img id="outimg" style="border-style:solid;"></img>
+</body>
+</html>
