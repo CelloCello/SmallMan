@@ -9,4 +9,4 @@ The other day, I did this project.
 
 
 ##Output
-![cat](https://github.com/CelloCello/SmallMan/blob/master/sample.png)
+![cat](https://github.com/CelloCello/SmallMan/raw/master/sample.png)
