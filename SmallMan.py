@@ -69,7 +69,7 @@ def getNewImg():
 
         font_path = "."+url_for('static', filename="LIHEI_PROPC_0.ttf")
         print font_path
-        font = ImageFont.truetype(font_path, wordSize, encoding='unicode')
+        font = ImageFont.truetype("LIHEI_PROPC_0.ttf", wordSize, encoding='unicode')
         print "44444444444444"
         #size = font.getsize(request.json['words'])
         lineIdx = 0
