@@ -1,1 +1,1 @@
-web: gunicorn Smallman:app
+web: gunicorn SmallMan:app
