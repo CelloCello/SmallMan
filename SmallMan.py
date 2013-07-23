@@ -67,7 +67,7 @@ def getNewImg():
         catImg = Image.open("static/cat.png")
         print "33333333333333"
 
-        font_path = "./"+url_for('static', filename="LIHEI_PROPC_0.ttf")
+        font_path = "."+url_for('static', filename="LIHEI_PROPC_0.ttf")
         print font_path
         font = ImageFont.truetype(font_path, wordSize, encoding='unicode')
         print "44444444444444"
