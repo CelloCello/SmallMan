@@ -67,7 +67,8 @@ def getNewImg():
         catImg = Image.open("static/cat.png")
         print "33333333333333"
 
-        font_path = url_for('static', filename="LIHEI_PROPC_0.ttf")
+        font_path = "./"+url_for('static', filename="LIHEI_PROPC_0.ttf")
+        print font_path
         font = ImageFont.truetype(font_path, wordSize, encoding='unicode')
         print "44444444444444"
         #size = font.getsize(request.json['words'])
@@ -92,7 +93,7 @@ def getNewImg():
 
         # sign cello's studio
         print "5555555555555"
-        font1 = ImageFont.truetype("static/LIHEI_PROPC_0.ttf", 12, encoding='unicode')
+        font1 = ImageFont.truetype(font_path, 12, encoding='unicode')
         txtImg = Image.new('RGBA', (200, 20), (0, 0, 0, 0))
         draw = ImageDraw.Draw(txtImg)
         draw.text((10, 0), "Powered by Cello's studio", font=font1, fill='#000000')
