@@ -110,7 +110,6 @@ def getNewImg():
         imgName_ = "temp.png"
         bgImg.save("static/data/"+imgName_, 'PNG')
         #return jsonify(rst=imgName_)
-        print jsonify(rst=url_for('static', filename="data/"+imgName_))
         return jsonify(rst=url_for('static', filename="data/"+imgName_))
     return "NG"
     
