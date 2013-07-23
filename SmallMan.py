@@ -104,7 +104,9 @@ def getNewImg():
         #     count_ = count_ + 1
         #save the image
         #image = transformImg(image)
-        imgName_ = str(thread.get_ident()) + ".png"
+        #imgName_ = str(thread.get_ident()) + ".png"
+        #bgImg.save("static/data/"+imgName_, 'PNG')
+        imgName_ = "temp.png"
         bgImg.save("static/data/"+imgName_, 'PNG')
         #return jsonify(rst=imgName_)
         return jsonify(rst=url_for('static', filename="data/"+imgName_))
