@@ -92,7 +92,7 @@ def getNewImg():
         bgImg.paste(txtImg, (0, imgH-20), txtImg)
 
         rows_ = len(wordlist_)
-        height_ = 24 * rows_
+        #height_ = 24 * rows_
         #image = Image.new('RGBA', (300, height_), (0, 0, 0, 0))
         #image = Image.new('RGBA', (size[0]+10, size[1]+height_), (255, 255, 255, 255))
         #image = image.rotate(20.5, expand=1)
@@ -106,9 +106,11 @@ def getNewImg():
         #image = transformImg(image)
         #imgName_ = str(thread.get_ident()) + ".png"
         #bgImg.save("static/data/"+imgName_, 'PNG')
+        print "======"
         imgName_ = "temp.png"
         bgImg.save("static/data/"+imgName_, 'PNG')
         #return jsonify(rst=imgName_)
+        print jsonify(rst=url_for('static', filename="data/"+imgName_))
         return jsonify(rst=url_for('static', filename="data/"+imgName_))
     return "NG"
     
