@@ -45,9 +45,7 @@ def transformImg(srcImg):
 
 @app.route('/getNewImg',  methods=['POST'])
 def getNewImg():
-    print "0000000000000"
     if request.method == 'POST':
-        print "11111111111111111"
         #print json.loads(request.data)
         #return jsonify(rst=request.json)
         #font = ImageFont.truetype("/usr/share/fonts/truetype/takao/TakaoPGothic.ttf", 24, encoding='unicode')
@@ -61,15 +59,12 @@ def getNewImg():
         imgW = imgW * wordSize + 350
 
         #create background image
-        print "22222222222222"
         bgImg = Image.new('RGBA', (imgW, imgH), (255, 255, 255, 255))
         # load cat
         catImg = Image.open("static/cat.png")
-        print "33333333333333"
 
         font_path = "."+url_for('static', filename="LIHEI_PROPC_0.TTF")
         font = ImageFont.truetype(font_path, wordSize, encoding='unicode')
-        print "44444444444444"
         #size = font.getsize(request.json['words'])
         lineIdx = 0
         wordIdx = 0
@@ -91,7 +86,6 @@ def getNewImg():
             lineIdx = lineIdx + 1
 
         # sign cello's studio
-        print "5555555555555"
         font1 = ImageFont.truetype(font_path, 12, encoding='unicode')
         txtImg = Image.new('RGBA', (200, 20), (0, 0, 0, 0))
         draw = ImageDraw.Draw(txtImg)
@@ -113,7 +107,6 @@ def getNewImg():
         #image = transformImg(image)
         #imgName_ = str(thread.get_ident()) + ".png"
         #bgImg.save("static/data/"+imgName_, 'PNG')
-        print "======"
         imgName_ = "temp.png"
         bgImg.save("static/data/"+imgName_, 'PNG')
         #return jsonify(rst=imgName_)
