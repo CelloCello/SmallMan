@@ -65,8 +65,10 @@ def getNewImg():
         bgImg = Image.new('RGBA', (imgW, imgH), (255, 255, 255, 255))
         # load cat
         catImg = Image.open("static/cat.png")
+        print "33333333333333"
 
         font = ImageFont.truetype("LIHEI PROPC_0.ttf", wordSize, encoding='unicode')
+        print "44444444444444"
         #size = font.getsize(request.json['words'])
         lineIdx = 0
         wordIdx = 0
@@ -88,7 +90,7 @@ def getNewImg():
             lineIdx = lineIdx + 1
 
         # sign cello's studio
-        print "33333333333333333333333333"
+        print "5555555555555"
         font1 = ImageFont.truetype("LIHEI PROPC_0.ttf", 12, encoding='unicode')
         txtImg = Image.new('RGBA', (200, 20), (0, 0, 0, 0))
         draw = ImageDraw.Draw(txtImg)
